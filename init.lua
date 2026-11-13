@@ -137,7 +137,7 @@ vim.filetype.add {
 }
 
 -- 2. Parser. yaml.gosplit buffers use gosplit, not yaml. With gosplit.so on the
---    runtimepath, nvim-treesitter's highlight module starts it.
+--    runtimepath, the treesitter FileType autocmd (lua/custom/plugins/treesitter.lua) starts it.
 vim.treesitter.language.register('gosplit', 'yaml.gosplit')
 
 -- 3. Server. Not in the LSP `servers` table: it is neither a Mason package nor an lspconfig server.
